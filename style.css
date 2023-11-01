@@ -1,5 +1,11 @@
 #mainContainer {
     display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#gridContainer {
+    display: flex;
 }
 
 #gridRow {
@@ -9,4 +15,5 @@
 #gridBox {
     border: 1px solid #000;
     padding: 20px;
+    flex: 1;
 }

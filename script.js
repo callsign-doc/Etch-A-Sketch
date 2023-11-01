@@ -1,4 +1,9 @@
 let mainContainer = document.getElementById('mainContainer');
+let gridContainer = document.getElementById('gridContainer');
+
+gridContainer.addEventListener('mouseover', (event)=> {
+    event.target.style.backgroundColor = 'blue';
+})
 
 //loop for 16 rows
 for (let i = 0; i < 16; i++) {
@@ -14,6 +19,6 @@ for (let i = 0; i < 16; i++) {
         console.log(`Box ${i} was created`);
     }
 
-    mainContainer.append(row);
+    gridContainer.append(row);
 }
   
