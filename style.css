@@ -5,19 +5,23 @@
 
     justify-content: center;
     margin: auto;
-
+    width: 50%;
+    height: 90vh;
 }
 
 #gridContainer {
     display: flex;
+    flex: 1;
 }
 
 #gridRow {
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
 #gridBox {
     border: 1px solid #d4d4d4;
-    padding: 40%;
+    padding: 10%;
     flex: 1;
 }

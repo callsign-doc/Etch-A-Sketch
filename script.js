@@ -12,9 +12,14 @@ newGridBtn.addEventListener('click', ()=> {
     } else {
         while (gridContainer.firstChild) {
             gridContainer.removeChild(gridContainer.lastChild);
-          }
+        }
         
-        createGrid(dimension);
+        if (dimension > 100) {
+            //limit max grid to 100x100
+            createGrid(100);
+        } else {
+            createGrid(dimension);
+        }
     }
     
 })
@@ -28,7 +33,6 @@ function createGrid(dimension) {
         let row = document.createElement('div');
         row.id = 'gridRow';
     
-        //create 16 boxes
         for (let i = 0; i < dimension; i++) {
             let box = document.createElement('div');
             box.id = 'gridBox'
