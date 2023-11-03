@@ -2,6 +2,19 @@ let mainContainer = document.getElementById('mainContainer');
 let gridContainer = document.getElementById('gridContainer');
 let newGridBtn = document.getElementById('newGridBtn');
 
+let randomRGBValue = function() {
+    
+}
+
+function generateRandomColor() {
+    // Generate random RGB values (pastel color)
+    const randomRed = Math.floor(Math.random() * 101) + 150;  // Limit to 150-250 range
+  const randomGreen = Math.floor(Math.random() * 101) + 150;  // Limit to 150-250 range
+  const randomBlue = Math.floor(Math.random() * 101) + 150;  // Limit to 150-250 range
+
+    return `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`
+}
+
 newGridBtn.addEventListener('click', ()=> {
     let dimension = prompt('Enter the size of your square grid (e.g., 8 for an 8x8 grid)');
     
@@ -16,6 +29,7 @@ newGridBtn.addEventListener('click', ()=> {
         
         if (dimension > 100) {
             //limit max grid to 100x100
+            alert('Exceeded limit of 100x100.')
             createGrid(100);
         } else {
             createGrid(dimension);
@@ -25,7 +39,10 @@ newGridBtn.addEventListener('click', ()=> {
 })
 
 gridContainer.addEventListener('mouseover', (event)=> {
-    event.target.style.backgroundColor = 'blue';
+    
+
+    // Set the background color using the rgb() function
+    event.target.style.backgroundColor = generateRandomColor();
 })
 
 function createGrid(dimension) {
