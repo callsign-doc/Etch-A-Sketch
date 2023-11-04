@@ -1,7 +1,7 @@
 #mainContainer {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    /* flex: 1; */
 
     justify-content: center;
     margin: auto;
@@ -12,6 +12,7 @@
 #gridContainer {
     display: flex;
     flex: 1;
+    flex-shrink: 0;
 }
 
 #gridRow {
