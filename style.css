@@ -1,18 +1,61 @@
 #mainContainer {
     display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#subcontainer {
+    display: flex;
     flex-direction: column;
-    /* flex: 1; */
+    flex-shrink: 0;
 
     justify-content: center;
     margin: auto;
-    width: 50%;
-    height: 90vh;
+    /* width: 50%;
+    height: 90vh; */
+    min-width: 50vh;
+    max-width: 80vh;
+    min-height: 50vh;
+    max-height: 80vh;
+}
+
+#headerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#title {
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+#generateGridContainer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+}
+
+#newGridBtn {
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+#currentGridSize {
+    font-size: large;
+    font-weight: bold;
 }
 
 #gridContainer {
     display: flex;
-    flex: 1;
-    flex-shrink: 0;
+    min-width: 50vh;
+    max-width: 80vh;
+    min-height: 50vh;
+    max-height: 80vh;
+    
+    /* flex: 1; */
+    /* flex-shrink: 0; */
 }
 
 #gridRow {
@@ -25,4 +68,5 @@
     border: 1px solid #d4d4d4;
     padding: 10%;
     flex: 1;
+    flex-shrink: 0; 
 }

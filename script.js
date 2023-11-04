@@ -1,6 +1,9 @@
 let mainContainer = document.getElementById('mainContainer');
 let gridContainer = document.getElementById('gridContainer');
 let newGridBtn = document.getElementById('newGridBtn');
+let currentGridSizeUI = document.getElementById('currentGridSize');
+
+let currentGridSize;
 
 let randomRGBValue = function() {
     
@@ -60,7 +63,11 @@ function createGrid(dimension) {
     
         gridContainer.append(row);
     }
+
+    currentGridSize = `${dimension} x ${dimension}`;
+    currentGridSizeUI.textContent = currentGridSize;
 }
+
 
 createGrid(16);
 
