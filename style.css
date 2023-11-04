@@ -1,7 +1,7 @@
 #mainContainer {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 #subcontainer {
@@ -43,7 +43,7 @@
 }
 
 #currentGridSize {
-    font-size: large;
+    font-size: 20px;
     font-weight: bold;
 }
 
